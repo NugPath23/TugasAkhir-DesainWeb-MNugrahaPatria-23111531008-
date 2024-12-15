@@ -1,0 +1,1237 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+*:focus
+{
+    outline: none;
+    border: none;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: Montserrat;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Header */
+
+header
+{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-header
+{
+    background: #00C0C6;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 1vh;
+    z-index: 1001;
+}
+
+.container-logo img
+{
+    margin: 1.2vh;
+    width: 12%;
+    animation: flip 5s linear infinite;
+}
+
+@keyframes flip
+{
+    to
+    {
+        transform: rotateY(360deg);
+    }
+}
+
+.container-button 
+{
+    display: flex;
+    list-style: none;
+}
+
+.container-button a 
+{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    margin: 0 3vh 0 3vh;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.container-button a:after
+{
+    content: ""; /* Elemen kosong untuk underline */
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0; /* Jarak dari teks */
+    height: 2px;
+    width: 0; /* Ketebalan underline */
+    background-color: #1A2B56; /* Warna underline */
+    transition: all 0.3s ease; /* Efek transisi */
+}
+
+.container-button a:hover 
+{
+    color: #1A2B56;
+    padding-bottom: 5px;
+}
+
+.container-button a:hover:after
+{
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+.hamburger{
+    display: none;
+}
+
+/* Header End */
+
+/* Beranda */
+
+.beranda
+{
+    background-color: #1A2B56;
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-beranda
+{
+    justify-items: center;
+    align-items: center;
+}
+
+.container-logo-beranda
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A2B56;
+}
+
+.container-logo-beranda img
+{
+    margin-top: 10vh;
+    margin-bottom: 25px;
+    width: 30%;
+    background-color: #1A2B56;
+}
+
+.container-isi-beranda
+{
+    font-family: sigmar;
+    justify-items: center;
+    font-size: 400%;
+    font-weight: 200;
+    color: white;
+    letter-spacing: 10px;
+}
+
+.tulisan-informatika
+{
+    letter-spacing: 0;
+    padding: 1vh 11vh;
+    background: linear-gradient(to right, #00C0C6, #1A2B56);
+}
+
+/* Beranda End */
+
+/* Sejarah */
+
+#sejarah
+{
+    padding-top: 10vh;
+}
+
+.container-sejarah
+{
+    margin-left: 5vh;
+    margin-right: 5vh;
+    margin-bottom: 3vh;
+}
+
+.judul-sejarah
+{
+    justify-items: center;
+    font-size: 500%;
+}
+
+.logo-sejarah
+{
+    padding-top: 5%;
+}
+
+.container-isi-sejarah
+{
+    justify-items: center;
+}
+
+.penjelasan-sejarah
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 2vh;
+    margin-top: 2vh;
+}
+
+.table1-sejarah
+{
+    padding: 2vh;
+    color: white;
+    width: 50%;
+    background-color: #1A2B56;
+    border-radius: 10px;
+}
+
+.table2-sejarah
+{
+    padding: 2vh;
+    color: white;
+    width: 50%;
+    background-color: #1A2B56;
+    border-radius: 10px;
+}
+
+.curve-sejarah
+{
+    position: static;
+    bottom: 0;
+    background-color: #1A2B56;
+}
+
+/* Sejarah End */
+
+/* divisi */
+#divisi
+{
+    z-index: -1;
+}
+
+.container-divisi
+{
+    padding-top: 10vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-bottom: 5vh;
+    color: white;
+    background-color: #1A2B56;
+}
+
+.judul-divisi
+{
+    justify-items: center;
+    font-size: 500%;
+    margin-bottom: 10vh;
+}
+
+.slider{
+    height: 100vh;
+    margin-top: -50px;
+    position: relative;
+}
+.slider .list .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+    border-radius: 50px;
+}
+.slider .list .item img{
+    width: 100%;
+    height: 150%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.internal{
+    width: 100%;
+    height: 150%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.entre{
+    width: 100%;
+    height: 130%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.slider .list .item::after{
+    content: '';
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        to top, #000 40%, transparent
+    );
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.slider .list .item .content{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 500px;
+    max-width: 80%;
+    z-index: 1;
+}
+.slider .list .item .content p:nth-child(1){
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.slider .list .item .content h1{
+    font-size: 100px;
+    margin: 0;
+    margin-top: 25vh;
+}
+.slider .list .item.active{
+    opacity: 1;
+    z-index: 10;
+}
+@keyframes showContent {
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h1,
+.slider .list .item.active p:nth-child(3){
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s .7s ease-in-out 1 forwards;
+}
+.slider .list .item.active h1{
+    animation-delay: 0.5s;
+}
+.slider .list .item.active p:nth-child(3){
+    animation-duration: 1.3s;
+}
+.arrows{
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    z-index: 100;
+}
+.arrows button{
+    background-color: #eee5;
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    color: #eee;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #eee;
+    color: black;
+}
+
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 150px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+}
+.thumbnail::-webkit-scrollbar{
+    width: 0;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 150px;
+    filter: brightness(.5);
+    transition: .5s;
+    flex-shrink: 0;
+    margin-left: 1vh;
+    margin-right: 1vh;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.thumbnail .item.active{
+    filter: brightness(1.5);
+}
+
+/* divisi End */
+
+/* Sosmed */
+#contact
+{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    max-width: 550px;
+    margin: auto;
+    padding-top: 10vh;
+}
+
+.container-contact
+{
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-bottom: 5vh;
+}
+
+.sectionHeader{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 500%;
+    color: #000000;
+    margin-bottom: 0.5em;
+    justify-items: center;
+}
+
+.heading,.sub-heading{
+    margin-bottom: .5em;
+    font-weight: bold;
+}
+
+.heading{
+    font-size: 2.5em;
+}
+
+.sub-heading{
+    text-align: left;
+}
+
+.contactForm{
+    display: grid;
+    gap: 3em;
+}
+
+form{
+    width: 100%;
+    margin-top: 3em;
+}
+
+.para{
+    color: #000000;
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+.para2{
+    text-align: left;
+}
+
+.input{
+    width: 95%;
+    max-width: 700px;
+    border: none;
+    font-size: 0.9rem;
+    padding: 1em;
+    outline: none;
+    background-color: transparent;
+    color: #000000;
+    border-radius: 10px;
+    border: 1px solid rgb(53, 53, 53);
+    margin-bottom: 1em;
+
+}
+
+.input:focus{
+    border: 1px solid #000000;
+}
+
+.input::placeholder{
+    text-transform: capitalize;
+}
+
+.input-submit{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    width: 25%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+.input-submit:hover
+{
+    background-color: #1A2B56;
+    border: 2px solid #1A2B56;
+    color: white;
+}
+
+.map-container{
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.mapBg{
+    position: absolute;
+    background-color: var(--primaryColor);
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 90%;
+    border-radius: 20px;
+}
+
+.map{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+}
+
+.map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.contactMethod{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    text-align: left;
+}
+
+.method{
+    display: flex;
+    align-items: center;
+}
+
+.para a
+{
+    font-size: 2rem;
+    color: #000000;
+    margin: 0 5px 0 5px;
+}
+
+
+/* Sosmed End */
+
+/* Footer */
+.wrapper {
+    background-color: red;
+    margin-inline: auto;
+    position: relative;
+    height: 25px;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 20%,
+        rgba(0, 0, 0, 1) 80%,
+        rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+    to {
+        left: -200px;
+    }
+}
+
+.wrap {
+    background-color: red;
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(200px * 8), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    margin: 0 2vh 0 2vh;
+}
+
+.wrap1 {
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item2 {
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+/* Footer End */
+
+@media screen and (min-width:800px) {
+
+    #contact{
+        max-width: 1100px;
+    }
+    .contactForm{
+        grid-template-columns: 1fr 1fr;
+    }   
+
+    .contactMethod{
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .sub-heading{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-header
+    {
+        width: auto;
+        height: auto;
+    }
+
+    .container-button a 
+    {
+        position: relative;
+        text-decoration: none;
+        color: white;
+        margin: 0 3vh 0 3vh;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .container-button a:after
+    {
+        content: ""; /* Elemen kosong untuk underline */
+        position: absolute;
+        left: auto;
+        right: 0;
+        bottom: 0; /* Jarak dari teks */
+        height: 2px;
+        width: 0; /* Ketebalan underline */
+        background-color: #1A2B56; /* Warna underline */
+        transition: all 0.3s ease; /* Efek transisi */
+    }
+
+    .container-button a:hover 
+    {
+        color: #1A2B56;
+        padding-bottom: 5px;
+    }
+
+    .container-button a:hover:after
+    {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+
+    #divisi
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    .slider .list .item img{
+        width: 100%;
+        height: 150%;
+        object-fit: cover;
+        border-radius: 50px;
+    }
+
+    .thumbnail{
+        position: absolute;
+        bottom: 50px;
+        z-index: 11;
+        display: flex;
+        gap: 10px;
+        width: auto;
+        height: auto;
+        padding: 0 10px 0;
+        box-sizing: border-box;
+        overflow: auto;
+        justify-content: center;
+    }
+
+    .thumbnail .item{
+        align-content: center;
+        justify-items: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 20%;
+        height: 20%;
+    }
+
+    .thumbnail .item img{
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+    }
+
+    .container-beranda
+    {
+        justify-items: center;
+        align-items: center;
+    }
+
+    .judul-sejarah{
+        font-size: 100%;
+    }
+
+    .judul-divisi{
+        font-size: 300%;
+    }
+
+    .method{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .method p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .container-header
+    {
+        width: auto;
+        height: auto;
+    }
+
+    .container-logo img
+    {
+        margin: 1.2vh;
+        width: 10%;
+        animation: flip 5s linear infinite;
+    }
+
+    .hamburger{
+        display: inline;
+        font-size: 2rem;
+    }
+
+    .container-button {
+        background-color:  rgb(34, 37, 49);
+        height: 50vh;
+        width: 80%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        right: -450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        justify-content: center;
+        text-align: center;
+        font-size: 3rem;
+        transition: .3s ease;
+    }
+
+    .container-button.active {
+        right: 0;
+    }
+
+    .container-button a:after
+    {
+        content: ""; /* Elemen kosong untuk underline */
+        position: absolute;
+        left: auto;
+        right: 0;
+        bottom: 0; /* Jarak dari teks */
+        height: 2px;
+        width: 0; /* Ketebalan underline */
+        background-color: #1A2B56; /* Warna underline */
+        transition: all 0.3s ease; /* Efek transisi */
+    }
+
+    .container-button a:hover 
+    {
+        color: #1A2B56;
+        padding-bottom: 5px;
+    }
+
+    .container-button a:hover:after
+    {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+
+    .tulisan-informatika
+    {
+        letter-spacing: 0;
+        padding: 1vh 5vh;
+        background: linear-gradient(to right, #00C0C6, #1A2B56);
+    }
+
+    #divisi
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    .slider
+    {
+        height: 50vh;
+        margin-top: -50px;
+        position: relative;
+    }
+
+    .slider .list .item img{
+        width: 100%;
+        height: 50%;
+        /* object-fit: cover; */
+        border-radius: 50px;
+    }
+
+    .slider .list .item .content h1{
+        font-size: 30px;
+        margin: 0;
+        margin-top: 15vh;
+    }
+
+    .arrows{
+        position: absolute;
+        top: 35%;
+        right: 10px;
+        z-index: 100;
+    }
+
+    .arrows button{
+        color: black;
+    }
+
+    .slider .list .item::after{
+        content: '';
+        width: 100%;
+        height: 20%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+            to top, #00ffff56 0%, transparent
+        );
+        /* border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px; */
+    }
+
+    .thumbnail{
+        position: absolute;
+        bottom: 50px;
+        z-index: 11;
+        display: flex;
+        gap: 10px;
+        width: auto;
+        height: auto;
+        padding: 0 10px 0;
+        box-sizing: border-box;
+        overflow: auto;
+        justify-content: center;
+    }
+
+    .thumbnail .item{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 10%;
+        height: 20%;
+    }
+
+    .thumbnail .item img{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .container-logo-beranda img
+    {
+        margin-top: 1vh;
+        width: 30%;
+        background-color: #1A2B56;
+    }
+
+    .container-isi-beranda
+    {
+        font-family: sigmar;
+        font-size: 1rem;
+        font-weight: 200;
+        color: white;
+        letter-spacing: 10px;
+    }
+
+    .tulisan-informatika
+    {
+        font-size: 220%;
+        letter-spacing: 0;
+        margin-top: 2vh;
+        padding: 1vh 3vh;
+        background: linear-gradient(to right, #00C0C6, #1A2B56);
+    }
+
+    .container-beranda
+    {
+        justify-items: center;
+        align-items: center;
+    }
+
+    .judul-sejarah{
+        font-size: 150%;
+    }
+
+    .judul-divisi{
+        font-size: 150%;
+    }
+
+    .sectionHeader
+    {
+        font-size: 250%;
+    }
+
+    .method{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .method p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .para{
+        color: #000000;
+        font-size: 1rem;
+        line-height: 1.2em;
+        margin-bottom: 1em;
+    }
+    
+    .para2{
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .input-submit{
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        width: 40%;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+        transition: 0.1s;
+    }
+    
+    .input-submit:hover
+    {
+        background-color: #1A2B56;
+        border: 2px solid #1A2B56;
+        color: white;
+    }
+
+    .input-submit:active{
+        background-color: #1A2B56;
+        border: 2px solid #1A2B56;
+        color: white;
+    }
+
+    .sub-heading
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .para a
+    {
+        font-size: 3rem;
+        color: #000000;
+        margin: 2vh 5vh 0 5vh;
+    }
+
+    .logo-sejarah
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+    }
+
+    .logo-sejarah img
+    {
+        margin-top: 5vh;
+        margin-bottom: 2vh;
+        width: 90%;
+    }
+
+    .penjelasan-sejarah
+    {
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    .table1-sejarah
+    {
+        margin-bottom: 1vh;
+        height: 100%;
+        width: 100%;
+    }
+
+    .table2-sejarah
+    {
+        margin-top: 1vh;
+        height: 100%;
+        width: 100%;
+    }
+
+    .wrapper {
+        background-color: red;
+        margin-inline: auto;
+        position: relative;
+        height: 25px;
+        overflow: hidden;
+        mask-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0)
+      );
+    }
+    
+    @keyframes scrollLeft {
+        to {
+            left: -400px;
+        }
+    }
+    
+    .wrap {
+        background-color: red;
+        border-radius: 6px;
+        position: absolute;
+        left: max(calc(50px * 8), 100%);
+        animation-name: scrollLeft;
+        animation-duration: 18s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        margin: 0 2vh 0 2vh;
+    }
+    
+    .wrap1 {
+        animation-delay: calc(30s / 8 * (8 - 1) * -1);
+    }
+    
+    .item2 {
+        animation-delay: calc(30s / 8 * (8 - 2) * -1);
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .container-button {
+        background-color:  #00C0C6;
+        height: 50vh;
+        width: 80%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        right: -450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        justify-content: center;
+        text-align: center;
+        font-size: 3rem;
+        transition: .3s ease;
+    }
+
+    .container-isi-beranda{
+        font-size: 0.7rem;
+    }
+
+    .judul-divisi h1
+    {
+        margin-bottom: 25vh;
+    }
+
+    .slider
+    {
+        height: 50vh;
+        margin-top: -50px;
+        position: relative;
+    }
+
+    .slider .list .item img{
+        width: 100%;
+        height: 70%;
+        /* object-fit: cover; */
+        border-radius: 50px;
+    }
+
+    .slider .list .item .content h1{
+        font-size: 25px;
+        margin: 0;
+        margin-top: 26vh;
+    }
+
+    .arrows{
+        position: absolute;
+        top: 40%;
+        right: 10px;
+        z-index: 100;
+    }
+
+    .arrows button{
+        color: black;
+    }
+
+    .slider .list .item{
+        position: absolute;
+        inset: -12vh 0 0 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: .5s;
+        border-radius: 50px;
+    }
+
+    .slider .list .item::after{
+        content: '';
+        width: 100%;
+        height: 80%;
+        position: absolute;
+        left: 0;
+        bottom: -100px;
+        background-image: linear-gradient(
+            to top, #00ffff56 0%, transparent
+        );
+        /* border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px; */
+    }
+
+    .thumbnail{
+        position: absolute;
+        bottom: -40px;
+        z-index: 11;
+        display: flex;
+        gap: 10px;
+        width: auto;
+        height: auto;
+        padding: 0 10px 0;
+        box-sizing: border-box;
+        overflow: auto;
+        justify-content: center;
+    }
+
+    .thumbnail .item{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 10%;
+        height: 20%;
+    }
+
+    .thumbnail .item img{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+@media screen and (max-width: 466px) {
+
+    .container-button {
+        background-color:  #00C0C6;
+        height: 50vh;
+        width: 80%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        right: -450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        justify-content: center;
+        text-align: center;
+        font-size: 3rem;
+        transition: .3s ease;
+    }
+
+    .input-submit{
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        width: 45%;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+        transition: 0.1s;
+    }
+    
+    .input-submit:hover
+    {
+        background-color: #1A2B56;
+        border: 2px solid #1A2B56;
+        color: white;
+    }
+
+    .input-submit:active{
+        background-color: #1A2B56;
+        border: 2px solid #1A2B56;
+        color: white;
+    }
+
+}
